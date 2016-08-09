@@ -2,77 +2,77 @@
 
 const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* 0: Default layer
-     * ,--------------------------------------------------------.
-     * |ESC   |  Q|  W|   E|  R|  T|  Y|  U|  I|  O|  P|    Bspc|
-     * |--------------------------------------------------------|
-     * |TAB   |  A|  S|   D|  F|  G|  H|  J|  K|  L|  ;|  Return|
-     * |--------------------------------------------------------|
-     * |      |  Z|  X|   C|  V|  B|  N|  M|  ,|  .|  /|        |
-     * |--------------------------------------------------------|
-     * |      |   |ALT|CTRL|FN0|   |FN1|FN2|CTRL|  |        |
-     * `-------------------------------------------------------'
+     * ,--------------------------------------------------------------.
+     * |ESC   |  q|  w|   e|  r|  t|  y|     u|     i|  o|  p|    Bspc|
+     * |--------------------------------------------------------------|
+     * |TAB   |  a|  s|   d|  f|  g|  h|     j|     k|  l|  ;|  Return|
+     * |--------------------------------------------------------------|
+     * |      |  z|  x|   c|  v|  b|  n|     m|     ,|  .|  /|        |
+     * |--------------------------------------------------------------|
+     * |          |ALT|CTRL|FN0|   |FN1| SHIFT| SUPER|                |
+     * `--------------------------------------------------------------'
      */
     KEYMAP(
-        ESC, Q,   W,   E,   R,   T,   Y,   U,   I,   O,     P,  BSPC, \
+         ESC,Q,   W,   E,   R,   T,   Y,   U,   I,   O,     P,  BSPC, \
         LCTL,A,   S,   D,   F,   G,   H,   J,   K,   L,  SCLN,   ENT, \
              Z,   X,   C,   V,   B,   N,   M,COMM, DOT,  SLSH,        \
-                LALT,FN0, TAB,           FN1, FN2, RCTL              ),
+               LALT,LCTL, FN0,           FN1,RSFT,RGUI                ),
 
     /* 1: FN 0
-     * ,-------------------------------------------------------------------.
-     * |ESC   |   |   |  POWER|  SLEEP|  WAKE|  0|  1|  2|   3|  4|    Bspc|
-     * |-------------------------------------------------------------------|
-     * |TAB   |   |   |  EJECT|  PREV |  NEXT|  5|  6|  7|   8|  9|  Return|
-     * |-------------------------------------------------------------------|
-     * |      |   |   |   MUTE|  VOLU |  VOLD|  +|  -|  *|   /|  =|        |
-     * |-------------------------------------------------------------------|
-     * |      |   |ALT|    FN0|    Tab|      |   |FN1|FN2|CTRL|   |        |
-     * `-------------------------------------------------------------------'
+     * ,-------------------------------------------------------------------------.
+     * |ESC   |   |   |  POWER|  SLEEP|  WAKE|  0|   1|     2|     3|  4|    Bspc|
+     * |-------------------------------------------------------------------------|
+     * |TAB   |   |   |  EJECT|  PREV |  NEXT|  5|   6|     7|     8|  9|  Return|
+     * |-------------------------------------------------------------------------|
+     * |      |   |   |   MUTE|  VOLU |  VOLD|  +|   -|     *|     /|  =|        |
+     * |-------------------------------------------------------------------------|
+     * |          |ALT|   CTRL|    FN0|      |   | FN1| SHIFT| SUPER|            |
+     * `-------------------------------------------------------------------------'
      */
     KEYMAP(
          ESC, TRNS,   TRNS,       POWER, SLEP, WAKE,    0,    1,    2,    3,    4, BSPC, \
         LCTL, TRNS,   MPLY, MEDIA_EJECT, MPRV, MNXT,    5,    6,    7,    8,    9,  ENT, \
               TRNS,   TRNS,        MUTE, VOLU, VOLD, PPLS, PMNS, PAST, PSLS, PEQL,       \
-                      LALT,         FN0,  TAB,              FN1,  FN2, RCTL              ),
+                      LALT,        LCTL,  FN0,               FN1,RSFT, RGUI              ),
+
     /* 1: FN 1
      * ,-------------------------------------------------------------------.
-     * |ESC   |   |   |  POWER|  SLEEP|  WAKE|  0|  1|  2|   3|  4|    Bspc|
+     * |ESC   |  /|  ||  \|  (|  )|     _|     ,|     .|     ?|  !|    Bspc|
      * |-------------------------------------------------------------------|
-     * |TAB   |   |   |  EJECT|  PREV |  NEXT|  5|  6|  7|   8|  9|  Return|
+     * |TAB   |  `|  '|  "|  [|  ]|  LEFT|  DOWN|    UP| RIGHT|  <|  Return|
      * |-------------------------------------------------------------------|
-     * |      |   |   |   MUTE|  VOLU |  VOLD|  +|  -|  *|   /|  =|        |
+     * |      |  #|  ~|  &|  {|  }|     @|     ^|     $|     %|  >|        |
      * |-------------------------------------------------------------------|
-     * |      |   |ALT|    FN0|    Tab|      |   |FN1|FN2|CTRL|   |        |
+     * |          |ALT|CTRL|FN0|          |  FN1| SHIFT| SUPER|            |
      * `-------------------------------------------------------------------'
      */
     KEYMAP(
-         ESC, TRNS,   TRNS,       POWER, SLEP, WAKE,    0,    1,    2,    3,    4, BSPC, \
-        LCTL, TRNS,   MPLY, MEDIA_EJECT, MPRV, MNXT,    5,    6,    7,    8,    9,  ENT, \
-              TRNS,   TRNS,        MUTE, VOLU, VOLD, PPLS, PMNS, PAST, PSLS, PEQL,       \
-                      LALT,         FN0,  TAB,              FN1,  FN2, RCTL              ),
-
-
-    /* 1: FN 2
-     * ,----------------------------------------------------------------.
-     * |ESC   |  /|  ||  \|  (|  )|     _|     ,|  .|     ?|  !|    Bspc|
-     * |----------------------------------------------------------------|
-     * |TAB   |  `|  '|  "|  [|  ]|  LEFT|  DOWN| UP| RIGHT|  <|  Return|
-     * |----------------------------------------------------------------|
-     * |      |  #|  ~|  &|  {|  }|     @| POUND|  $|     %|  >|        |
-     * |----------------------------------------------------------------|
-     * |      |   |ALT|FN0|Tab|   |      |   FN1|FN2|  CTRL|   |        |
-     * `----------------------------------------------------------------'
-     */
-    KEYMAP(
-         ESC,       SLSH, SHIFT+BSLS,       BSLS, SHIFT+MINS,    SHIFT+9, SHIFT+0, SHIFT+MINS,    COMM,     DOT,  SHIFT+SLSH, BSPC, \
-        LCTL, SHIFT+NUHS,       QUOT, SHIFT+QUOT,       LBRC,       RBRC,    LEFT,       DOWN,      UP,   RIGHT, SHIFT+COMM9,  ENT, \
-                 SHIFT+3, SHIFT+NUHS,    SHIFT+7, SHIFT+LBRC, SHIFT+RBRC, SHIFT+2,    SHIFT+6, SHIFT+4, SHIFT+5,   SHIFT+DOT,       \
-                                LALT,        FN0,        TAB,                             FN1,     FN2,    RCTL                     ),
+         ESC, SLSH,  FN2, BSLS,  FN3,  FN4,  FN5,  FN6, COMM,   DOT,  FN7, BSPC, \
+        LCTL,  GRV, QUOT,  FN8, LBRC, RBRC, LEFT, DOWN,   UP, RIGHT,  FN9,  ENT, \
+              FN10, FN11, FN12, FN13, FN14, FN15  FN16, FN17,  FN18, FN19,       \
+                    LALT, LCTL,  FN0,              FN1, RSFT,  RGUI              ),
 };
 
 const uint16_t PROGMEM fn_actions[] = {
- [0] = ACTION_LAYER_MOMENTARY(0),
- [1] = ACTION_LAYER_TAP_KEY(1, KC_ESC),
- [2] = ACTION_LAYER_MOMENTARY(2),
+ [0] = ACTION_LAYER_TAP_KEY(0, KC_SPACE),
+ [1] = ACTION_LAYER_TAP_KEY(1, KC_SPACE),
+ [2] = ACTION_MODS_KEY(MOD_LSFT, KC_BSLS),  // pipe
+ [3] = ACTION_MODS_KEY(MOD_LSFT, KC_9),     // right bracket
+ [4] = ACTION_MODS_KEY(MOD_LSFT, KC_0,      // left bracket
+ [5] = ACTION_MODS_KEY(MOD_LSFT, KC_MINS),  // underscore
+ [6] = ACTION_MODS_KEY(MOD_LSFT, KC_9),     // right bracket
+ [7] = ACTION_MODS_KEY(MOD_LSFT, KC_1),     // exclamation
+ [8] = ACTION_MODS_KEY(MOD_LSFT, KC_QUOT),  // double quote
+ [9] = ACTION_MODS_KEY(MOD_LSFT, KC_COMM),  // left angle bracket
+ [10] = ACTION_MODS_KEY(MOD_LSFT, KC_3),    // hash
+ [11] = ACTION_MODS_KEY(MOD_LSFT, KC_GRV),  // tilda
+ [12] = ACTION_MODS_KEY(MOD_LSFT, KC_7),    // ampersand
+ [13] = ACTION_MODS_KEY(MOD_LSFT, KC_LBRC), // left curly braces
+ [14] = ACTION_MODS_KEY(MOD_LSFT, KC_RBRC), // right curly braces
+ [15] = ACTION_MODS_KEY(MOD_LSFT, KC_2),    // at
+ [16] = ACTION_MODS_KEY(MOD_LSFT, KC_6),    // accent
+ [17] = ACTION_MODS_KEY(MOD_LSFT, KC_4),    // dollar
+ [18] = ACTION_MODS_KEY(MOD_LSFT, KC_5),    // percentage
+ [19] = ACTION_MODS_KEY(MOD_LSFT, KC_DOR),    // right angle bracket
 
 };
