@@ -175,7 +175,7 @@ static matrix_row_t read_cols(void)
 
 /* Row pin configuration
  * row: 0   1   2   3
- * pin: B4  B5  B2  B6
+ * pin: B6  B2  B5  B4
  */
 static void unselect_rows(void)
 {
@@ -189,20 +189,20 @@ static void select_row(uint8_t row)
     // Output low(DDR:1, PORT:0) to select
     switch (row) {
         case 0:
-            DDRB  |= (1<<4);
-            PORTB &= ~(1<<4);
+            DDRB  |= (1<<6);
+            PORTB &= ~(1<<6);
             break;
         case 1:
-            DDRB  |= (1<<5);
-            PORTB &= ~(1<<5);
-            break;
-        case 2:
             DDRB  |= (1<<2);
             PORTB &= ~(1<<2);
             break;
+        case 2:
+            DDRB  |= (1<<5);
+            PORTB &= ~(1<<5);
+            break;
         case 3:
-            DDRB  |= (1<<6);
-            PORTB &= ~(1<<6);
+            DDRB  |= (1<<4);
+            PORTB &= ~(1<<4);
             break;
     }
 }
