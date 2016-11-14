@@ -1,0 +1,5 @@
+[How to flash]
+
+1. Set chip into bookloader mode by tapping RST to GND pin twice
+2. Check that its in bootloader mode with ls /dev/tty*, ACM0 should be present
+3. Run avrdude -p atmega32u4 -P /dev/ttyACM0  -c avr109  -U flash:w:<HEX FILE>

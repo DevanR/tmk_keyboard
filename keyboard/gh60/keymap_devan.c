@@ -9,14 +9,14 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------------------------------------------------------------|
      * |      |  z|  x|   c|  v|  b|  n|     m|     ,|  .|  /|        |
      * |--------------------------------------------------------------|
-     * |          |ALT|CTRL|FN0|   |FN1| SHIFT| SUPER|                |
+     * |          |SHIFT|FN1|SUPER|   |CTRL| FN0| SHIFT|              |
      * `--------------------------------------------------------------'
      */
     KEYMAP(
          ESC, Q,   W,   E,   R,   T,   Y,   U,   I,   O,     P,  BSPC, \
          TAB, A,   S,   D,   F,   G,   H,   J,   K,   L,  SCLN,   ENT, \
               Z,   X,   C,   V,   B,   N,   M,COMM, DOT,  SLSH,        \
-                LALT,LCTL, FN0,           FN1,RSFT,RGUI                ),
+                LSFT,FN1, LGUI,           RCTL,FN0,RSFT                ),
 
     /* 1: DVORAK
      * ,--------------------------------------------------------------.
@@ -26,14 +26,14 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------------------------------------------------------------|
      * |      |  ;|  q|   j|  k|  x|  b|     m|     w|  v|  z|        |
      * |--------------------------------------------------------------|
-     * |          |ALT|CTRL|FN0|   |FN1| SHIFT| SUPER|                |
+     * |          |SHIFT|FN1|SUPER|   |CTRL| FN0| SHIFT|              |
      * `--------------------------------------------------------------'
      */
     KEYMAP(
         ESC, COMM,DOT, P,   Y,   F,   G,   C,   R,   L,   SLSH,  BSPC,  \
         TAB,    A,  O, E,   U,   I,   D,   H,   T,   N,      S,   ENT,  \
              SCLN,  Q, J,   K,   X,   B,   M,   W,   V,      Z,         \
-                LALT,LCTL, FN0,           FN1,RSFT,RGUI                ),
+                LSFT,FN1, LGUI,           RCTL,FN0,RSFT                ),
 
     /* 2: FN 0
      * ,---------------------------------------------------------------------------.
@@ -43,14 +43,14 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |---------------------------------------------------------------------------|
      * |      |  QW|  DV|   MUTE|  VOLU |  VOLD|  +|   -|     *|     /|  =|        |
      * |---------------------------------------------------------------------------|
-     * |          |ALT|   CTRL|    FN0|      |   | FN1| SHIFT| SUPER|              |
+     * |          |SHIFT|FN1|SUPER|   |CTRL| FN0| SHIFT|              |
      * `---------------------------------------------------------------------------'
      */
     KEYMAP(
-         ESC, FN20,   PSCR,       POWER, SLEP, WAKE,    0,    1,    2,    3,    4, BSPC, \
+         ESC, LALT,   PSCR,       POWER, SLEP, WAKE,    0,    1,    2,    3,    4, BSPC, \
          TAB, MPLY,   MSTP, MEDIA_EJECT, MPRV, MNXT,    5,    6,    7,    8,    9,  ENT, \
               FN21, FN22,        MUTE, VOLU, VOLD, PPLS, PMNS, PAST, PSLS, PEQL,       \
-                      LALT,        LCTL,  FN0,               FN1,RSFT, RGUI              ),
+                LSFT,FN1, LGUI,           RCTL,FN0,RSFT                ),
 
     /* 3: FN 1
      * ,-------------------------------------------------------------------.
@@ -60,14 +60,14 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-------------------------------------------------------------------|
      * |      |  #|  ~|  &|  {|  }|     @|     ^|     $|     %|  >|        |
      * |-------------------------------------------------------------------|
-     * |          |ALT|CTRL|FN0|          |  FN1| SHIFT| SUPER|            |
+     * |          |SHIFT|FN1|SUPER|   |CTRL| FN0| SHIFT|              |
      * `-------------------------------------------------------------------'
      */
     KEYMAP(
          ESC, SLSH,  FN2, BSLS,  FN3,  FN4,  FN5,  FN6, COMM,   DOT,  FN7, BSPC, \
          TAB,  GRV, QUOT,  FN8, LBRC, RBRC, LEFT, DOWN,   UP, RIGHT,  FN9,  ENT, \
               FN10, FN11, FN12, FN13, FN14, FN15, FN16, FN17,  FN18, FN19,       \
-                    LALT, LCTL,  FN0,              FN1, RSFT,  RGUI              ),
+                LSFT,FN1, LGUI,           RCTL,FN0,RSFT                ),
 };
 
 const uint16_t PROGMEM fn_actions[] = {
