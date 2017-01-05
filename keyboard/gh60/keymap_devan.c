@@ -9,7 +9,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------------------------------------------------------------|
      * |      |  z|  x|   c|  v|  b|  n|     m|     ,|  .|  /|        |
      * |--------------------------------------------------------------|
-     * |          |SHIFT|FN1|SUPER|   |CTRL| FN0| SHIFT|              |
+     * |          |SHIFT|CTRL|FN1|   |FN0| SUPER| SHIFT|              |
      * `--------------------------------------------------------------'
      */
     KEYMAP(
@@ -26,7 +26,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------------------------------------------------------------|
      * |      |  ;|  q|   j|  k|  x|  b|     m|     w|  v|  z|        |
      * |--------------------------------------------------------------|
-     * |          |SHIFT|FN1|SUPER|   |CTRL| FN0| SHIFT|              |
+     * |          |SHIFT|CTRL|FN1|   |FN0| SUPER| SHIFT|              |
      * `--------------------------------------------------------------'
      */
     KEYMAP(
@@ -43,7 +43,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |---------------------------------------------------------------------------|
      * |      |  QW|  DV|   MUTE|  VOLU |  VOLD|  +|   -|     *|     /|  =|        |
      * |---------------------------------------------------------------------------|
-     * |          |SHIFT|FN1|SUPER|   |CTRL| FN0| SHIFT|              |
+     * |          |SHIFT|CTRL|FN1|   |FN0| SUPER| SHIFT|                           |
      * `---------------------------------------------------------------------------'
      */
     KEYMAP(
@@ -60,13 +60,13 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-------------------------------------------------------------------|
      * |      |  #|  ~|  &|  {|  }|     @|     ^|     $|     %|  >|        |
      * |-------------------------------------------------------------------|
-     * |          |SHIFT|FN1|SUPER|   |CTRL| FN0| SHIFT|              |
+     * |          |SHIFT|CTRL|FN1|   |FN0| SUPER| SHIFT|                   |
      * `-------------------------------------------------------------------'
      */
     KEYMAP(
-         ESC, SLSH,  FN2, BSLS,  FN3,  FN4,  FN5,  FN6, COMM,   DOT,  FN7, BSPC, \
+         ESC, SLSH,  FN2, BSLS,  FN3,  FN4,  FN5,  COMM,  DOT,  FN6,  FN7, BSPC, \
          TAB,  GRV, QUOT,  FN8, LBRC, RBRC, LEFT, DOWN,   UP, RIGHT,  FN9,  ENT, \
-              FN10, FN11, FN12, FN13, FN14, FN15, FN16, FN17,  FN18, FN19,       \
+              FN10, FN2, FN12, FN13, FN14, FN15, FN16, FN17,  FN18, FN19,       \
                 LSFT,FN1, LGUI,           RCTL,FN0,RSFT                ),
 };
 
@@ -77,12 +77,12 @@ const uint16_t PROGMEM fn_actions[] = {
  [3] = ACTION_MODS_KEY(MOD_LSFT, KC_9),              // right bracket
  [4] = ACTION_MODS_KEY(MOD_LSFT, KC_0),              // left bracket
  [5] = ACTION_MODS_KEY(MOD_LSFT, KC_MINS),           // underscore
- [6] = ACTION_MODS_KEY(MOD_LSFT, KC_9),              // right bracket
+ [6] = ACTION_MODS_KEY(MOD_LSFT, KC_SLSH),           // question mark
  [7] = ACTION_MODS_KEY(MOD_LSFT, KC_1),              // exclamation
  [8] = ACTION_MODS_KEY(MOD_LSFT, KC_QUOT),           // double quote
  [9] = ACTION_MODS_KEY(MOD_LSFT, KC_COMM),           // left angle bracket
- [10] = ACTION_MODS_KEY(MOD_LSFT, KC_3),             // hash
- [11] = ACTION_MODS_KEY(MOD_LSFT, KC_GRV),           // tilda
+ [10] = ACTION_MODS_KEY(KC_NUHS),                    // hash
+ [11] = ACTION_MODS_KEY(MOD_LSFT, KC_NUHS),          // tilda
  [12] = ACTION_MODS_KEY(MOD_LSFT, KC_7),             // ampersand
  [13] = ACTION_MODS_KEY(MOD_LSFT, KC_LBRC),          // left curly braces
  [14] = ACTION_MODS_KEY(MOD_LSFT, KC_RBRC),          // right curly braces
