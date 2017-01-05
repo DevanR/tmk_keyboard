@@ -9,7 +9,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------------------------------------------------------------|
      * |      |  z|  x|   c|  v|  b|  n|     m|     ,|  .|  /|        |
      * |--------------------------------------------------------------|
-     * |          |SHIFT|CTRL|FN1|   |FN0| SUPER| SHIFT|              |
+     * |          |SHIFT|FN1|CTRL|   | SUPER|FN0| SHIFT|              |
      * `--------------------------------------------------------------'
      */
     KEYMAP(
@@ -26,7 +26,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------------------------------------------------------------|
      * |      |  ;|  q|   j|  k|  x|  b|     m|     w|  v|  z|        |
      * |--------------------------------------------------------------|
-     * |          |SHIFT|CTRL|FN1|   |FN0| SUPER| SHIFT|              |
+     * |          |SHIFT|FN1|CTRL|   | SUPER|FN0| SHIFT|              |
      * `--------------------------------------------------------------'
      */
     KEYMAP(
@@ -43,7 +43,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |---------------------------------------------------------------------------|
      * |      |  QW|  DV|   MUTE|  VOLU |  VOLD|  +|   -|     *|     /|  =|        |
      * |---------------------------------------------------------------------------|
-     * |          |SHIFT|CTRL|FN1|   |FN0| SUPER| SHIFT|                           |
+     * |          |SHIFT|FN1|CTRL|   | SUPER|FN0| SHIFT|                           |
      * `---------------------------------------------------------------------------'
      */
     KEYMAP(
@@ -60,7 +60,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-------------------------------------------------------------------|
      * |      |  #|  ~|  &|  {|  }|     @|     ^|     $|     %|  >|        |
      * |-------------------------------------------------------------------|
-     * |          |SHIFT|CTRL|FN1|   |FN0| SUPER| SHIFT|                   |
+     * |          |SHIFT|FN1|CTRL|   | SUPER|FN0| SHIFT|                   |
      * `-------------------------------------------------------------------'
      */
     KEYMAP(
@@ -79,14 +79,14 @@ const uint16_t PROGMEM fn_actions[] = {
  [5] = ACTION_MODS_KEY(MOD_LSFT, KC_MINS),           // underscore
  [6] = ACTION_MODS_KEY(MOD_LSFT, KC_SLSH),           // question mark
  [7] = ACTION_MODS_KEY(MOD_LSFT, KC_1),              // exclamation
- [8] = ACTION_MODS_KEY(MOD_LSFT, KC_2),             // double quote
+ [8] = ACTION_MODS_KEY(MOD_LSFT, KC_2),              // double quote
  [9] = ACTION_MODS_KEY(MOD_LSFT, KC_COMM),           // left angle bracket
  [10] = ACTION_MODS_KEY(MOD_LSFT, KC_NUHS),          // tilda
  [11] = ACTION_MODS_KEY(MOD_LSFT, KC_NUHS),          // tilda
  [12] = ACTION_MODS_KEY(MOD_LSFT, KC_7),             // ampersand
  [13] = ACTION_MODS_KEY(MOD_LSFT, KC_LBRC),          // left curly braces
  [14] = ACTION_MODS_KEY(MOD_LSFT, KC_RBRC),          // right curly braces
- [15] = ACTION_MODS_KEY(MOD_LSFT, KC_QUOT),           // at
+ [15] = ACTION_MODS_KEY(MOD_LSFT, KC_QUOT),          // at
  [16] = ACTION_MODS_KEY(MOD_LSFT, KC_6),             // accent
  [17] = ACTION_MODS_KEY(MOD_LSFT, KC_4),             // dollar
  [18] = ACTION_MODS_KEY(MOD_LSFT, KC_5),             // percentage
