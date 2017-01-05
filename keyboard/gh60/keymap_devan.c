@@ -64,29 +64,29 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * `-------------------------------------------------------------------'
      */
     KEYMAP(
-         ESC, SLSH,  FN2, BSLS,  FN3,  FN4,  FN5,  COMM,  DOT,  FN6,  FN7, BSPC, \
+         ESC, SLSH,  NUBS,  FN2,  FN3,  FN4,  FN5,  COMM,  DOT,  FN6,  FN7, BSPC, \
          TAB,  GRV, QUOT,  FN8, LBRC, RBRC, LEFT, DOWN,   UP, RIGHT,  FN9,  ENT, \
-              FN10, FN2, FN12, FN13, FN14, FN15, FN16, FN17,  FN18, FN19,       \
+              NUHS, FN10, FN12, FN13, FN14, FN15, FN16, FN17,  FN18, FN19,       \
                 LSFT,FN1, LGUI,           RCTL,FN0,RSFT                ),
 };
 
 const uint16_t PROGMEM fn_actions[] = {
  [0] = ACTION_LAYER_TAP_KEY(2, KC_SPACE),            // LAYER 0
  [1] = ACTION_LAYER_TAP_KEY(3, KC_SPACE),            // LAYER 1
- [2] = ACTION_MODS_KEY(MOD_LSFT, KC_BSLS),           // pipe
+ [2] = ACTION_MODS_KEY(MOD_LSFT, KC_NUBS),           // pipe
  [3] = ACTION_MODS_KEY(MOD_LSFT, KC_9),              // right bracket
  [4] = ACTION_MODS_KEY(MOD_LSFT, KC_0),              // left bracket
  [5] = ACTION_MODS_KEY(MOD_LSFT, KC_MINS),           // underscore
  [6] = ACTION_MODS_KEY(MOD_LSFT, KC_SLSH),           // question mark
  [7] = ACTION_MODS_KEY(MOD_LSFT, KC_1),              // exclamation
- [8] = ACTION_MODS_KEY(MOD_LSFT, KC_QUOT),           // double quote
+ [8] = ACTION_MODS_KEY(MOD_LSFT, KC_2),             // double quote
  [9] = ACTION_MODS_KEY(MOD_LSFT, KC_COMM),           // left angle bracket
- [10] = ACTION_MODS_KEY(KC_NUHS),                    // hash
+ [10] = ACTION_MODS_KEY(MOD_LSFT, KC_NUHS),          // tilda
  [11] = ACTION_MODS_KEY(MOD_LSFT, KC_NUHS),          // tilda
  [12] = ACTION_MODS_KEY(MOD_LSFT, KC_7),             // ampersand
  [13] = ACTION_MODS_KEY(MOD_LSFT, KC_LBRC),          // left curly braces
  [14] = ACTION_MODS_KEY(MOD_LSFT, KC_RBRC),          // right curly braces
- [15] = ACTION_MODS_KEY(MOD_LSFT, KC_2),             // at
+ [15] = ACTION_MODS_KEY(MOD_LSFT, KC_QUOT),           // at
  [16] = ACTION_MODS_KEY(MOD_LSFT, KC_6),             // accent
  [17] = ACTION_MODS_KEY(MOD_LSFT, KC_4),             // dollar
  [18] = ACTION_MODS_KEY(MOD_LSFT, KC_5),             // percentage
