@@ -67,7 +67,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KEYMAP(
          ESC, FN12,  FN3,  FN4,  FN17,  FN9,  FN15,  FN5,  MINS,  FN6,  FN7, BSPC, \
          FN11,FN20, LBRC,  RBRC, FN18, FN16, QUOT, LEFT,  DOWN,   UP,RIGHT,  ENT, \
-              SCLN, FN13,  FN14,  GRV, FN19, FN11, FN8,   FN2, FN10, BSLS,       \
+              SCLN, FN13,  FN14,  GRV, FN19, FN20, FN8,   FN2, FN10, BSLS,       \
                 LSFT,FN1, LGUI,           RALT,FN0,RSFT                ),
 };
 
@@ -83,7 +83,7 @@ const uint16_t PROGMEM fn_actions[] = {
  [8] = ACTION_MODS_KEY(MOD_LSFT, KC_2),              // double quote
  [9] = ACTION_MODS_KEY(MOD_LSFT, KC_COMM),           // left angle bracket
  [10] = ACTION_MODS_KEY(MOD_LSFT, KC_GRV),           // tilda
- [11] = ACTION_MODS_KEY(MOD_LSFT, KC_3),             // hash
+ [11] = ACTION_MODS_TAP_KEY(MOD_RCTL, KC_TAB),       // CTRL and TAB
  [12] = ACTION_MODS_KEY(MOD_LSFT, KC_7),             // ampersand
  [13] = ACTION_MODS_KEY(MOD_LSFT, KC_LBRC),          // left curly braces
  [14] = ACTION_MODS_KEY(MOD_LSFT, KC_RBRC),          // right curly braces
@@ -92,7 +92,7 @@ const uint16_t PROGMEM fn_actions[] = {
  [17] = ACTION_MODS_KEY(MOD_LSFT, KC_4),             // dollar
  [18] = ACTION_MODS_KEY(MOD_LSFT, KC_5),             // percentage
  [19] = ACTION_MODS_KEY(MOD_LSFT, KC_DOT),           // right angle bracket
- [20] = ACTION_MODS_KEY(MOD_LSFT, KC_SCLN),          // colon
+ [20] = ACTION_MODS_KEY(MOD_LSFT, KC_3),             // hash
  [21] = ACTION_DEFAULT_LAYER_SET(0),                 // set qwerty layout
  [22] = ACTION_DEFAULT_LAYER_SET(1),                 // set dvorak layout
 };
