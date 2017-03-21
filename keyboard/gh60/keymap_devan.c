@@ -9,14 +9,14 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------------------------------------------------------------|
      * |      |  z|  x|   c|  v|  b|  n|     m|     ,|  .|  /|        |
      * |--------------------------------------------------------------|
-     * |          |sup|fn1|shift|   | shift|fn0| alt|                 |
+     * |          |shift|fn1|super|   | ctrl|fn0| shift|              |
      * `--------------------------------------------------------------'
      */
     KEYMAP(
          ESC, Q,   W,   E,   R,   T,   Y,   U,   I,   O,     P,  BSPC, \
          FN11, A,   S,   D,   F,   G,   H,   J,   K,   L,  SCLN,   ENT, \
               Z,   X,   C,   V,   B,   N,   M,COMM, DOT,  SLSH,        \
-                LGUI,FN1, LSFT,           RSFT,FN0,RCTL                ),
+                LSFT,FN1, LGUI,           RCTL,FN0,RSFT                ),
 
     /* 1: NORMAN
      * ,--------------------------------------------------------------.
@@ -26,7 +26,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------------------------------------------------------------|
      * |      |  z|  x|   c|  v|  b|  p|     m|     ,|  .|  /|        |
      * |--------------------------------------------------------------|
-     * |          |sup|fn1|shift|   | shift|fn0| alt|                 |
+     * |          |shift|fn1|super|   | ctrl|fn0| shift|              |
      * `--------------------------------------------------------------'
      */
 
@@ -34,7 +34,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          ESC, Q,   W,   D,   F,   K,   J,   U,   R,   L,   NUHS,  BSPC, \
          FN11, A,   S,   E,   T,   G,   Y,   N,   I,   O,  H,      ENT, \
                Z,   X,   C,   V,   B,   P,   M,COMM, DOT,  SLSH,        \
-                LGUI,FN1, LSFT,           RSFT,FN0,RCTL                ),
+                LSFT,FN1, LGUI,           RCTL,FN0,RSFT                ),
 
     /* 2: FN 0
      * ,---------------------------------------------------------------------------.
@@ -44,14 +44,14 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |---------------------------------------------------------------------------|
      * |      |  QW|  DV|   MUTE|  VOLU |  VOLD|  -|   +|     7|     8|  9|        |
      * |---------------------------------------------------------------------------|
-     * |          |sup|fn1|shift|   | shift|fn0| alt|                              |
+     * |          |shift|fn1|super|     | ctrl |fn0| shift|                        |
      * `---------------------------------------------------------------------------'
      */
     KEYMAP(
          ESC,  LALT, PSCR, POWER, SLEP, WAKE,          FN17,    0,       1,    2,   3, BSPC, \
          FN11, MPLY, MSTP, MEDIA_EJECT, MPRV, MNXT,    PAST,    PEQL,    4,    5,   6,  ENT, \
                FN21, FN22, MUTE, VOLU, VOLD,           PMNS,    PPLS,    7,    8,   9,       \
-               LGUI, FN1,  LSFT,                       RSFT, FN0,  RCTL                    ),
+               LSFT, FN1,  LGUI,                       RCTL, FN0,  RSFT                   ),
 
     /* 3: FN 1
      * ,-------------------------------------------------------------------.
@@ -61,7 +61,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-------------------------------------------------------------------|
      * |      |  \|  {|  }|  `|  ^|     $|     @|     ||     %|  ~|        |
      * |-------------------------------------------------------------------|
-     * |          |sup|fn1|shift|   | shift|fn0| alt|                      |
+     * |          |shift|fn1|super|   | ctrl|fn0| shift|                   |
      * `-------------------------------------------------------------------'
      */
     KEYMAP(
