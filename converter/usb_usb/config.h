@@ -30,10 +30,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 /* matrix size */
-#define MATRIX_ROWS 32
-#define MATRIX_COLS 8
+#define MATRIX_ROWS 16
+#define MATRIX_COLS 16
 
 /* key combination for command */
 #define IS_COMMAND() (keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT))) 
+
+
+// Disable power saving in USB suspend loop but remote wakeup is still valid.
+// This allows keep USB::Task() going during suspend without power down time delay.
+//#define NO_SUSPEND_POWER_DOWN
+
+
+// Disable USB startup wait, which can delays starting UHS2 Task() for 350-600ms.
+//#define NO_USB_STARTUP_WAIT_LOOP
+
+// Disable USB suspend loop, which blocks UHS2 Task() while power saving.
+// Note that this also disables power saving and remote wakeup from keyboard completely.
+//#define NO_USB_SUSPEND_LOOP
 
 #endif
