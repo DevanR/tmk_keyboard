@@ -3,9 +3,9 @@
 const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* 0: QWERTY
      * ,--------------------------------------------------------------.
-     * |esc   |  q|  w|   e|  r|  t|  y|     u|     i|  o|  p|    bspc|
+     * |esc   |  q|  w|   e|  r|  t|  y|     u|     i|  o|  p|bspc/del|
      * |--------------------------------------------------------------|
-     * |tab   |  a|  s|   d|  f|  g|  h|     j|     k|  l|  ;|  return|
+     * |tab/alt| a|  s|   d|  f|  g|  h|     j|     k|  l|  ;|  return|
      * |--------------------------------------------------------------|
      * |      |  z|  x|   c|  v|  b|  n|     m|     ,|  .|  /|        |
      * |--------------------------------------------------------------|
@@ -13,36 +13,18 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * `--------------------------------------------------------------'
      */
     KEYMAP(
-         ESC, Q,   W,   E,   R,   T,   Y,   U,   I,   O,     P,  BSPC, \
+         ESC, Q,   W,   E,   R,   T,   Y,   U,   I,   O,     P,  BSPC,  \
          FN11, A,   S,   D,   F,   G,   H,   J,   K,   L,  SCLN,   ENT, \
-              Z,   X,   C,   V,   B,   N,   M,COMM, DOT,  SLSH,        \
+              Z,   X,   C,   V,   B,   N,   M,COMM, DOT,  SLSH,         \
                 LSFT,FN1, LGUI,           RCTL,FN0,RSFT                ),
 
-    /* 1: NORMAN
-     * ,--------------------------------------------------------------.
-     * |esc   |  q|  w|   d|  f|  k|  j|     u|     r|  l|  #|    bspc|
-     * |--------------------------------------------------------------|
-     * |tab   |  a|  s|   e|  t|  g|  y|     n|     i|  o|  h|  return|
-     * |--------------------------------------------------------------|
-     * |      |  z|  x|   c|  v|  b|  p|     m|     ,|  .|  /|        |
-     * |--------------------------------------------------------------|
-     * |          |shift|fn1|super|   | ctrl|fn0| shift|              |
-     * `--------------------------------------------------------------'
-     */
-
-    KEYMAP(
-         ESC, Q,   W,   D,   F,   K,   J,   U,   R,   L,   NUHS,  BSPC, \
-         FN11, A,   S,   E,   T,   G,   Y,   N,   I,   O,  H,      ENT, \
-               Z,   X,   C,   V,   B,   P,   M,COMM, DOT,  SLSH,        \
-                LSFT,FN1, LGUI,           RCTL,FN0,RSFT                ),
-
-    /* 2: FN 0
+    /* 1: MENU
      * ,---------------------------------------------------------------------------.
-     * |ESC   |RST|PRINT|  POWER|  SLEEP|  WAKE|  $|   0|     1|     2|  3|    Bspc|
+     * |esc   |RST| PRINT|  POWER|  SLEEP|  WAKE|  $|   0|    1|     2|  3|    bspc|
      * |---------------------------------------------------------------------------|
-     * |TAB   |PLAY|STOP|  EJECT|  PREV |  NEXT|  *|   =|     4|     5|  6|  Return|
+     * |tab/alt|PLAY|STOP|  EJECT|  PREV |  NEXT|  *|   =|    4|     5|  6|  return|
      * |---------------------------------------------------------------------------|
-     * |      |  QW|  DV|   MUTE|  VOLU |  VOLD|  -|   +|     7|     8|  9|        |
+     * |      |  QW|     |   MUTE|  VOLU |  VOLD|  -|   +|    7|     8|  9|        |
      * |---------------------------------------------------------------------------|
      * |          |shift|fn1|super|     | ctrl |fn0| shift|                        |
      * `---------------------------------------------------------------------------'
@@ -53,11 +35,28 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                FN21, FN22, MUTE, VOLU, VOLD,           PMNS,    PPLS,    7,    8,   9,       \
                LSFT, FN1,  LGUI,                       RCTL, FN0,  RSFT                   ),
 
+    /* 2: FN 0
+     * ,--------------------------------------------------------------.
+     * |esc   |   1|  2|   3|  4|  5| 6|     7|     8|  9|  0|    bspc|
+     * |--------------------------------------------------------------|
+     * |tab/alt|  /|  [|   ]|  (| )|  +|     -|     *|  /|  =|  return|
+     * |--------------------------------------------------------------|
+     * |      |MENU|  {|   }|  :| _|  $|     %|     #|  ,|  .|        |
+     * |--------------------------------------------------------------|
+     * |          |shift|fn1|super|   | ctrl|fn0| shift|              |
+     * `--------------------------------------------------------------'
+     */
+
+    KEYMAP(
+         ESC, 1,   2,   3,   4,   5,   6,   7,   8,   9,   0,  BSPC,  \
+         FN11, SLSH,LBRC,RBRC,FN3,FN4,  PPLS,PMNS,PAST,SLSH,PEQL,ENT, \
+               FN22,FN13,FN14,FN23,FN5 ,FN17,FN18,FN20,COMM, DOT,   \
+                LSFT,FN1, LGUI,           RCTL,FN0,RSFT                ),
     /* 3: FN 1
      * ,-------------------------------------------------------------------.
-     * |ESC   |  &|  (|  )|  "|  <|     #|     _|     -|     =|  !|    Bspc|
+     * |esc   |  &|  (|  )|  "|  <|     #|     _|     -|     =|  !|    bspc|
      * |-------------------------------------------------------------------|
-     * |TAB   |  /|  [|  ]|  '|  >|  LEFT|  DOWN|    UP| RIGHT|  ?|  Return|
+     * |tab/alt| /|  [|  ]|  '|  >|  LEFT|  DOWN|    UP| RIGHT|  ?|  return|
      * |-------------------------------------------------------------------|
      * |      |  \|  {|  }|  `|  ^|     $|     @|     ||     %|  ~|        |
      * |-------------------------------------------------------------------|
@@ -69,11 +68,12 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          FN11,SLSH, LBRC,  RBRC, QUOT, FN19, LEFT,  DOWN,   UP,RIGHT, FN6, ENT, \
               BSLS, FN13,  FN14,  GRV, FN16, FN17, FN8,   FN2, FN18, FN10,      \
                 LGUI,FN1, LSFT,           RSFT,FN0,RCTL                ),
+
 };
 
 const action_t PROGMEM fn_actions[] = {
- [0] = ACTION_LAYER_TAP_KEY(2, KC_SPACE),            // LAYER 0
- [1] = ACTION_LAYER_TAP_KEY(3, KC_SPACE),            // LAYER 1
+ [0] = ACTION_LAYER_TAP_KEY(2, KC_SPACE),            // numbers
+ [1] = ACTION_LAYER_TAP_KEY(3, KC_SPACE),            // symbols
  [2] = ACTION_MODS_KEY(MOD_LSFT, KC_BSLS),           // pipe
  [3] = ACTION_MODS_KEY(MOD_LSFT, KC_9),              // right bracket
  [4] = ACTION_MODS_KEY(MOD_LSFT, KC_0),              // left bracket
@@ -83,7 +83,7 @@ const action_t PROGMEM fn_actions[] = {
  [8] = ACTION_MODS_KEY(MOD_LSFT, KC_2),              // double quote
  [9] = ACTION_MODS_KEY(MOD_LSFT, KC_COMM),           // left angle bracket
  [10] = ACTION_MODS_KEY(MOD_LSFT, KC_GRV),           // tilda
- [11] = ACTION_MODS_TAP_KEY(MOD_LALT, KC_TAB),       // ALT and TAB
+ [11] = ACTION_MODS_TAP_KEY(MOD_LALT, KC_TAB),       // alt and tab
  [12] = ACTION_MODS_KEY(MOD_LSFT, KC_7),             // ampersand
  [13] = ACTION_MODS_KEY(MOD_LSFT, KC_LBRC),          // left curly braces
  [14] = ACTION_MODS_KEY(MOD_LSFT, KC_RBRC),          // right curly braces
@@ -94,5 +94,6 @@ const action_t PROGMEM fn_actions[] = {
  [19] = ACTION_MODS_KEY(MOD_LSFT, KC_DOT),           // right angle bracket
  [20] = ACTION_MODS_KEY(MOD_LSFT, KC_3),             // hash
  [21] = ACTION_DEFAULT_LAYER_SET(0),                 // set qwerty layout
- [22] = ACTION_DEFAULT_LAYER_SET(1),                 // set norman layout
+ [22] = ACTION_DEFAULT_LAYER_SET(1),                 // set number layout
+ [23] = ACTION_MODS_KEY(MOD_LSFT, KC_SCLN),             // hash
 };
